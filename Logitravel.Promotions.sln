@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29409.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logitravel.Promotions.Application", "Logitravel.Promotions.Application\Logitravel.Promotions.Application.csproj", "{7F1D6BD5-14DF-4E50-9F7F-FB3DD63D92F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logitravel.Promotions.Entities", "Logitravel.Promotions.Entities\Logitravel.Promotions.Entities.csproj", "{03C6BC98-DE46-40E5-89E5-FFDBE591F7DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logitravel.Promotions.Entities", "Logitravel.Promotions.Entities\Logitravel.Promotions.Entities.csproj", "{03C6BC98-DE46-40E5-89E5-FFDBE591F7DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logitravel.Promotions.Repository", "Logitravel.Promotions.Repository\Logitravel.Promotions.Repository.csproj", "{FEFE17BB-7402-49D8-9E66-A8D74F6CBF66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logitravel.Promotions.Repository", "Logitravel.Promotions.Repository\Logitravel.Promotions.Repository.csproj", "{FEFE17BB-7402-49D8-9E66-A8D74F6CBF66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logitravel.Promotions.Model", "Logitravel.Promotions.Model\Logitravel.Promotions.Model.csproj", "{923A7D12-7A09-4AC6-BC1D-F2123D6268E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logitravel.Promotions.Model", "Logitravel.Promotions.Model\Logitravel.Promotions.Model.csproj", "{923A7D12-7A09-4AC6-BC1D-F2123D6268E8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logitravel.Promotions.Domain", "Logitravel.Promotions.Domain\Logitravel.Promotions.Domain.csproj", "{66830401-1274-49DF-8EDB-549959DB4D74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logitravel.Promotions.Domain", "Logitravel.Promotions.Domain\Logitravel.Promotions.Domain.csproj", "{66830401-1274-49DF-8EDB-549959DB4D74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7F1D6BD5-14DF-4E50-9F7F-FB3DD63D92F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F1D6BD5-14DF-4E50-9F7F-FB3DD63D92F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F1D6BD5-14DF-4E50-9F7F-FB3DD63D92F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F1D6BD5-14DF-4E50-9F7F-FB3DD63D92F6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03C6BC98-DE46-40E5-89E5-FFDBE591F7DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{03C6BC98-DE46-40E5-89E5-FFDBE591F7DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03C6BC98-DE46-40E5-89E5-FFDBE591F7DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
