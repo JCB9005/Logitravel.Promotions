@@ -5,12 +5,14 @@ using System.Text;
 
 namespace Logitravel.Promotions.Repository.Interfaces
 {
-    interface IReservationRepository
+    public interface IReservationRepository
     {
         List<Reservation> GetReservations();
 
         List<Reservation> GetFilteredReservations(int? hotelCode, int? customerCode);
 
         Reservation GetReservation(string reservationCode);
+
+        int GetMostBookedHotelCodeByCustomer(int customerCode);
     }
 }

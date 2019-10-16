@@ -3,10 +3,12 @@ using System.Collections.Generic;
 
 namespace Logitravel.Promotions.Repository.Interfaces
 {
-    interface IHotelRepository
+    public interface IHotelRepository
     {
         List<Hotel> GetHotels();
 
         Hotel GetHotel(int hotelCode);
+
+        List<Hotel> GetFilteredHotels(int? zoneCode, Enums.HotelType? hotelType);
     }
 }

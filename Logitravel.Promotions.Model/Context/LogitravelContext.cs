@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using static Logitravel.Promotions.Model.Enums;
 
 namespace Logitravel.Promotions.Model.Context
 {
     public class LogitravelContext
     {
+        private int _zonesCount = int.Parse(ConfigurationManager.AppSettings.Get("NumberOfZones"));
+        private int _hotelsCount = int.Parse(ConfigurationManager.AppSettings.Get("NumberOfHotels"));
+        private int _customersCount = int.Parse(ConfigurationManager.AppSettings.Get("NumberOfCustomers"));
+        private int _reservationsCount = int.Parse(ConfigurationManager.AppSettings.Get("NumberOfReservations"));
+
         private int _hotelTypes = Enum.GetValues(typeof(HotelType)).Length;
 
         private static LogitravelContext _instance;
@@ -48,7 +54,7 @@ namespace Logitravel.Promotions.Model.Context
         {
             Zones = new List<Zone>();
 
-            for (int i = 1; i <= 5; i++)
+            for (int i = 1; i <= _zonesCount; i++)
             {
                 Zones.Add(new Zone
                 {
@@ -64,7 +70,7 @@ namespace Logitravel.Promotions.Model.Context
 
             Hotels = new List<Hotel>();
 
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= _hotelsCount; i++)
             {
                 Hotels.Add(new Hotel
                 {
@@ -101,14 +107,15 @@ namespace Logitravel.Promotions.Model.Context
         {
             Customers = new List<Customer>();
 
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= _customersCount; i++)
             {
                 Customers.Add(new Customer
                 {
                     Code = i,
                     FirstName = $"Name {i}",
                     Surname = $"Surname {i}",
-                    Email = $"email{i}@logitravel.com"
+                    Email = $"email{i}@logitravel.com",
+                    PromotionsAllowed = i % 2 != 0
                 });
             }
         }
@@ -120,7 +127,7 @@ namespace Logitravel.Promotions.Model.Context
 
             Reservations = new List<Reservation>();
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < _reservationsCount; i++)
             {
                 Reservations.Add(new Reservation
                 {

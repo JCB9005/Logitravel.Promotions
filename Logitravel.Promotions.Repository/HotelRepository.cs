@@ -17,5 +17,22 @@ namespace Logitravel.Promotions.Repository
         {
             return LogitravelContext.Instance.Hotels;
         }
+
+        public List<Hotel> GetFilteredHotels(int? zoneCode, Enums.HotelType? hotelType)
+        {
+            List<Hotel> hotels = LogitravelContext.Instance.Hotels;
+
+            if(zoneCode.HasValue)
+            {
+                hotels = hotels.Where(h => h.ZoneCode == zoneCode.Value).ToList();
+            }
+
+            if(hotelType.HasValue)
+            {
+                hotels = hotels.Where(h => h.Type == hotelType.Value).ToList();
+            }
+
+            return hotels;
+        }
     }
 }

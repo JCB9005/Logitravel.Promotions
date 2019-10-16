@@ -5,8 +5,10 @@ using System.Text;
 
 namespace Logitravel.Promotions.Repository.Interfaces
 {
-    interface ICustomerRepository
+    public interface ICustomerRepository
     {
         List<Customer> GetCustomers();
+
+        List<Customer> GetFilteredCustomers(bool allowsPromotions);
     }
 }

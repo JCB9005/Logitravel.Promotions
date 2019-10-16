@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Logitravel.Promotions.Repository.Interfaces
 {
-    interface IZoneRepository
+    public interface IZoneRepository
     {
         List<Zone> GetZones();
 

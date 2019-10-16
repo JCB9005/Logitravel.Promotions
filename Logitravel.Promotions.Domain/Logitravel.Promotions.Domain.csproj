@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Logitravel.Promotions.Entities\Logitravel.Promotions.Entities.csproj" />
+    <ProjectReference Include="..\Logitravel.Promotions.Repository\Logitravel.Promotions.Repository.csproj" />
   </ItemGroup>
 
 </Project>
