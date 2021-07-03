@@ -84,23 +84,15 @@ namespace Logitravel.Promotions.Model.Context
 
         private HotelType PickRandomHotelType(int coefficient)
         {
-            switch (coefficient)
+            return coefficient switch
             {
-                case 0:
-                    return HotelType.Beach;
-                case 1:
-                    return HotelType.Urban;
-                case 2:
-                default:
-                    return HotelType.Resort;
-                case 3:
-                    return HotelType.Familiar;
-                case 4:
-                    return HotelType.Nature;
-                case 5:
-                    return HotelType.Airport;
-            }
-
+                0 => HotelType.Beach,
+                1 => HotelType.Urban,
+                3 => HotelType.Familiar,
+                4 => HotelType.Nature,
+                5 => HotelType.Airport,
+                _ => HotelType.Resort,
+            };
         }
 
         private void LoadCustomers()
